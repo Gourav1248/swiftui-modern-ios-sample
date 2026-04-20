@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-SwiftUI-MVVM-App/Pods-SwiftUI-MVVM-App-frameworks.sh
+${BUILT_PRODUCTS_DIR}/CountryPickerView/CountryPickerView.framework
+${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
+${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework
