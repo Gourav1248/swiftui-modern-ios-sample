@@ -16,7 +16,6 @@ struct Server {
   static var environment: Environment = .dev
   
   private init() {}
-  static let isLiveEnvironment = false // true: Live, false: Dev
   
   enum Scheme {
     static let Name = "https://"
@@ -24,8 +23,8 @@ struct Server {
   
   enum HostName {
     // https://devcmssquilio.thumbstack.dev/
-    static let Dev = "devcmssquilio.thumbstack.dev"
-    static let Live = "cms.squilio.com"
+    static let Dev = "api.example.dev"
+    static let Live = "api.example.com"
   }
   
   enum Path {
@@ -40,8 +39,8 @@ struct Server {
   
   enum BotServer {
     enum HostName {
-      static let Dev = "bft-squilio-bot-dev.ld4yeb.easypanel.host"
-      static let Live = "bft-squilio-bot.ld4yeb.easypanel.host"
+      static let Dev = "bot-dev.ld4yeb.easypanel.host"
+      static let Live = "bot.ld4yeb.easypanel.host"
     }
     
     enum API {
@@ -58,22 +57,6 @@ struct Server {
       return Server.API.DevUrl
     case .prod:
       return Server.API.LiveUrl
-    }
-  }
-  
-  static var SquilioBotUrl: String {
-    if isLiveEnvironment {
-      return BotServer.API.LiveUrl
-    } else {
-      return BotServer.API.DevUrl
-    }
-  }
-  
-  static var SentryEnvironment: String {
-    if isLiveEnvironment {
-      return "production"
-    } else {
-      return "debug"
     }
   }
 }
