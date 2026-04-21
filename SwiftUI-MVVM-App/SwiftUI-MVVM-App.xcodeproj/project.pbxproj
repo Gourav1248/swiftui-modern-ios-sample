@@ -54,6 +54,7 @@
 		D71C52082F95F21D00AA8060 /* ValidationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71C51D92F95F21C00AA8060 /* ValidationHelper.swift */; };
 		D71C52092F95F21D00AA8060 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71C51DA2F95F21C00AA8060 /* ContentView.swift */; };
 		D71C520A2F95F21D00AA8060 /* SwiftUI-MVVM-App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71C51DB2F95F21C00AA8060 /* SwiftUI-MVVM-App.swift */; };
+		D728E4A12F97493200EFD6C2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D728E4A02F97493200EFD6C2 /* HomeView.swift */; };
 		D7B232D52F800A4000D6620F /* SwiftUI-MVVM-AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B232D42F800A4000D6620F /* SwiftUI-MVVM-AppTests.swift */; };
 		D7B232DD2F800F8600D6620F /* LoginClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B232DC2F800F8600D6620F /* LoginClass.swift */; };
 		D7B232E22F801AEC00D6620F /* SignUpClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B232E12F801AEC00D6620F /* SignUpClass.swift */; };
@@ -122,6 +123,7 @@
 		D71C51D92F95F21C00AA8060 /* ValidationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationHelper.swift; sourceTree = "<group>"; };
 		D71C51DA2F95F21C00AA8060 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D71C51DB2F95F21C00AA8060 /* SwiftUI-MVVM-App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwiftUI-MVVM-App.swift"; sourceTree = "<group>"; };
+		D728E4A02F97493200EFD6C2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D75224342F6FF59A00F478E3 /* SwiftUI-MVVM-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-MVVM-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7B232D22F800A4000D6620F /* SwiftUI-MVVM-AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftUI-MVVM-AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7B232D42F800A4000D6620F /* SwiftUI-MVVM-AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI-MVVM-AppTests.swift"; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 		D71C51912F95F21C00AA8060 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				D728E4A22F97493F00EFD6C2 /* View */,
 				D71C51922F95F21C00AA8060 /* Home Service */,
 			);
 			path = Home;
@@ -509,6 +512,14 @@
 			path = WaveFormView;
 			sourceTree = "<group>";
 		};
+		D728E4A22F97493F00EFD6C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D728E4A02F97493200EFD6C2 /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D752242B2F6FF59A00F478E3 = {
 			isa = PBXGroup;
 			children = (
@@ -723,6 +734,7 @@
 				D71C51E22F95F21D00AA8060 /* SignUpModel.swift in Sources */,
 				D71C51E42F95F21D00AA8060 /* ForgotPasswordViewModel.swift in Sources */,
 				D71C51F02F95F21D00AA8060 /* AuthenticationWebService.swift in Sources */,
+				D728E4A12F97493200EFD6C2 /* HomeView.swift in Sources */,
 				D71C52052F95F21D00AA8060 /* Toast.swift in Sources */,
 				D71C51FE2F95F21D00AA8060 /* FormFieldView.swift in Sources */,
 				D71C51E12F95F21D00AA8060 /* SignUpViewModel.swift in Sources */,

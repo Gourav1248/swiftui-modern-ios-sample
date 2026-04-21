@@ -25,6 +25,7 @@ struct MainTabView: View {
          Group {
             switch selectedTab {
                case .home:
+                  HomeView()
                   Text("Home Screen")
 
                case .settings:

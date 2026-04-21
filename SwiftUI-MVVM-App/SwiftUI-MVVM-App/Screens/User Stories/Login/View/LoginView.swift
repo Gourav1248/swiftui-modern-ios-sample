@@ -238,6 +238,9 @@ extension LoginView: UserCreationDelegate {
     print("fetchUserData user = \(user.user)")
 
      isLoggedIn = true
+     if let encoded = try? JSONEncoder().encode(user.user) {
+        UserDefaults.standard.set(encoded, forKey: "userStoredDetails")
+     }
 
      DispatchQueue.main.async {
         self.isNavigateToHomeTab = true
