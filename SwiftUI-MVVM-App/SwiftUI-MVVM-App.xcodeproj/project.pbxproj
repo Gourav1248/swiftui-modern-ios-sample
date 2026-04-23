@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1CE9B573C1D03C0575B43EAC /* Pods_SwiftUI_MVVM_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3227D24C78BF32845214F6D /* Pods_SwiftUI_MVVM_App.framework */; };
+		D70EFA212F99F2C300F4B6A4 /* BannerSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70EFA202F99F2C300F4B6A4 /* BannerSectionView.swift */; };
+		D70EFA232F99F6ED00F4B6A4 /* ReferBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70EFA222F99F6ED00F4B6A4 /* ReferBannerView.swift */; };
 		D71C51DC2F95F21D00AA8060 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D71C51892F95F21C00AA8060 /* Assets.xcassets */; };
 		D71C51DD2F95F21D00AA8060 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71C518A2F95F21C00AA8060 /* AlertManager.swift */; };
 		D71C51DE2F95F21D00AA8060 /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71C518B2F95F21C00AA8060 /* AlertItem.swift */; };
@@ -58,6 +60,15 @@
 		D7B232D52F800A4000D6620F /* SwiftUI-MVVM-AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B232D42F800A4000D6620F /* SwiftUI-MVVM-AppTests.swift */; };
 		D7B232DD2F800F8600D6620F /* LoginClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B232DC2F800F8600D6620F /* LoginClass.swift */; };
 		D7B232E22F801AEC00D6620F /* SignUpClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B232E12F801AEC00D6620F /* SignUpClass.swift */; };
+		D7B585532F98872400276766 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B585522F98872400276766 /* HomeModel.swift */; };
+		D7B585552F98894600276766 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B585542F98894600276766 /* HomeViewModel.swift */; };
+		D7B585572F9889BA00276766 /* HomeWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B585562F9889BA00276766 /* HomeWebService.swift */; };
+		D7B5855A2F98920E00276766 /* HomeWebServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B585592F98920E00276766 /* HomeWebServiceProtocol.swift */; };
+		D7B5855C2F98979000276766 /* HomeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5855B2F98979000276766 /* HomeClass.swift */; };
+		D7B5855F2F989DD400276766 /* HomeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B5855E2F989DD400276766 /* HomeListView.swift */; };
+		D7B585612F989E9800276766 /* StoreSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B585602F989E9800276766 /* StoreSectionView.swift */; };
+		D7B585632F989ED600276766 /* VoucherSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B585622F989ED600276766 /* VoucherSectionView.swift */; };
+		D7B585652F98A1A100276766 /* VoucherCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B585642F98A1A100276766 /* VoucherCellView.swift */; };
 		D7FF24442F7004300006898E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D7FF24432F7004300006898E /* Alamofire */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +88,8 @@
 		C3227D24C78BF32845214F6D /* Pods_SwiftUI_MVVM_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUI_MVVM_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD883EE352223F073B8B664D /* Pods-SwiftUI-MVVM-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUI-MVVM-App.release.xcconfig"; path = "Target Support Files/Pods-SwiftUI-MVVM-App/Pods-SwiftUI-MVVM-App.release.xcconfig"; sourceTree = "<group>"; };
 		D099421AF548BCC2B0B63C88 /* Pods-SwiftUI-Learning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUI-Learning.release.xcconfig"; path = "Target Support Files/Pods-SwiftUI-Learning/Pods-SwiftUI-Learning.release.xcconfig"; sourceTree = "<group>"; };
+		D70EFA202F99F2C300F4B6A4 /* BannerSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerSectionView.swift; sourceTree = "<group>"; };
+		D70EFA222F99F6ED00F4B6A4 /* ReferBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferBannerView.swift; sourceTree = "<group>"; };
 		D71C51892F95F21C00AA8060 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D71C518A2F95F21C00AA8060 /* AlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		D71C518B2F95F21C00AA8060 /* AlertItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
@@ -129,6 +142,15 @@
 		D7B232D42F800A4000D6620F /* SwiftUI-MVVM-AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI-MVVM-AppTests.swift"; sourceTree = "<group>"; };
 		D7B232DC2F800F8600D6620F /* LoginClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginClass.swift; sourceTree = "<group>"; };
 		D7B232E12F801AEC00D6620F /* SignUpClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpClass.swift; sourceTree = "<group>"; };
+		D7B585522F98872400276766 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		D7B585542F98894600276766 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		D7B585562F9889BA00276766 /* HomeWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWebService.swift; sourceTree = "<group>"; };
+		D7B585592F98920E00276766 /* HomeWebServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWebServiceProtocol.swift; sourceTree = "<group>"; };
+		D7B5855B2F98979000276766 /* HomeClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeClass.swift; sourceTree = "<group>"; };
+		D7B5855E2F989DD400276766 /* HomeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListView.swift; sourceTree = "<group>"; };
+		D7B585602F989E9800276766 /* StoreSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSectionView.swift; sourceTree = "<group>"; };
+		D7B585622F989ED600276766 /* VoucherSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherSectionView.swift; sourceTree = "<group>"; };
+		D7B585642F98A1A100276766 /* VoucherCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +248,9 @@
 		D71C51912F95F21C00AA8060 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				D7B585582F9891FA00276766 /* Protocol */,
+				D728E4A42F97968300EFD6C2 /* Model */,
+				D728E4A32F97967700EFD6C2 /* ViewModel */,
 				D728E4A22F97493F00EFD6C2 /* View */,
 				D71C51922F95F21C00AA8060 /* Home Service */,
 			);
@@ -386,6 +411,7 @@
 				D71C51B52F95F21C00AA8060 /* ErrorHandler.swift */,
 				D71C51B62F95F21C00AA8060 /* WebApiConfiguration.swift */,
 				D71C51B72F95F21C00AA8060 /* WebService.swift */,
+				D7B585562F9889BA00276766 /* HomeWebService.swift */,
 			);
 			path = WebService;
 			sourceTree = "<group>";
@@ -516,8 +542,30 @@
 			isa = PBXGroup;
 			children = (
 				D728E4A02F97493200EFD6C2 /* HomeView.swift */,
+				D7B5855E2F989DD400276766 /* HomeListView.swift */,
+				D7B585602F989E9800276766 /* StoreSectionView.swift */,
+				D7B585622F989ED600276766 /* VoucherSectionView.swift */,
+				D7B585642F98A1A100276766 /* VoucherCellView.swift */,
+				D70EFA202F99F2C300F4B6A4 /* BannerSectionView.swift */,
+				D70EFA222F99F6ED00F4B6A4 /* ReferBannerView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D728E4A32F97967700EFD6C2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D7B585542F98894600276766 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D728E4A42F97968300EFD6C2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D7B585522F98872400276766 /* HomeModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		D752242B2F6FF59A00F478E3 = {
@@ -543,6 +591,7 @@
 		D7B232D32F800A4000D6620F /* SwiftUI-MVVM-AppTests */ = {
 			isa = PBXGroup;
 			children = (
+				D7B5855D2F98979500276766 /* Home */,
 				D7B232E02F801A7600D6620F /* SignUp */,
 				D7B232DB2F800F5200D6620F /* Login */,
 				D7B232D42F800A4000D6620F /* SwiftUI-MVVM-AppTests.swift */,
@@ -564,6 +613,22 @@
 				D7B232E12F801AEC00D6620F /* SignUpClass.swift */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		D7B585582F9891FA00276766 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				D7B585592F98920E00276766 /* HomeWebServiceProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		D7B5855D2F98979500276766 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D7B5855B2F98979000276766 /* HomeClass.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -716,13 +781,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7B5855A2F98920E00276766 /* HomeWebServiceProtocol.swift in Sources */,
 				D71C51F52F95F21D00AA8060 /* PastelessTextFiled.swift in Sources */,
 				D71C51DD2F95F21D00AA8060 /* AlertManager.swift in Sources */,
 				D71C51F82F95F21D00AA8060 /* FileAttachment.swift in Sources */,
 				D71C51ED2F95F21D00AA8060 /* SplashView.swift in Sources */,
 				D71C51DE2F95F21D00AA8060 /* AlertItem.swift in Sources */,
+				D70EFA212F99F2C300F4B6A4 /* BannerSectionView.swift in Sources */,
 				D71C52002F95F21D00AA8060 /* CommonEnum.swift in Sources */,
+				D7B5855F2F989DD400276766 /* HomeListView.swift in Sources */,
 				D71C51F72F95F21D00AA8060 /* ApplicationConstants.swift in Sources */,
+				D7B585572F9889BA00276766 /* HomeWebService.swift in Sources */,
 				D71C51E82F95F21D00AA8060 /* LoginViewModel.swift in Sources */,
 				D71C52032F95F21D00AA8060 /* PPAlerts.swift in Sources */,
 				D71C51FF2F95F21D00AA8060 /* CommonCrypto.swift in Sources */,
@@ -733,11 +802,13 @@
 				D71C51F12F95F21D00AA8060 /* WebServiceHeaders.swift in Sources */,
 				D71C51E22F95F21D00AA8060 /* SignUpModel.swift in Sources */,
 				D71C51E42F95F21D00AA8060 /* ForgotPasswordViewModel.swift in Sources */,
+				D7B585652F98A1A100276766 /* VoucherCellView.swift in Sources */,
 				D71C51F02F95F21D00AA8060 /* AuthenticationWebService.swift in Sources */,
 				D728E4A12F97493200EFD6C2 /* HomeView.swift in Sources */,
 				D71C52052F95F21D00AA8060 /* Toast.swift in Sources */,
 				D71C51FE2F95F21D00AA8060 /* FormFieldView.swift in Sources */,
 				D71C51E12F95F21D00AA8060 /* SignUpViewModel.swift in Sources */,
+				D7B585532F98872400276766 /* HomeModel.swift in Sources */,
 				D71C51F42F95F21D00AA8060 /* WebService.swift in Sources */,
 				D71C520A2F95F21D00AA8060 /* SwiftUI-MVVM-App.swift in Sources */,
 				D71C52042F95F21D00AA8060 /* Utility.swift in Sources */,
@@ -747,6 +818,7 @@
 				D71C51EE2F95F21D00AA8060 /* MainTabView.swift in Sources */,
 				D71C51EB2F95F21D00AA8060 /* LoginView.swift in Sources */,
 				D71C51F92F95F21D00AA8060 /* DocumentManager.swift in Sources */,
+				D7B585632F989ED600276766 /* VoucherSectionView.swift in Sources */,
 				D71C51EA2F95F21D00AA8060 /* LoginDataModel.swift in Sources */,
 				D71C51F22F95F21D00AA8060 /* ErrorHandler.swift in Sources */,
 				D71C52012F95F21D00AA8060 /* SecureFormFieldView.swift in Sources */,
@@ -757,8 +829,11 @@
 				D71C51E62F95F21D00AA8060 /* ForgotPaswordModel.swift in Sources */,
 				D71C51F32F95F21D00AA8060 /* WebApiConfiguration.swift in Sources */,
 				D71C51F62F95F21D00AA8060 /* AppFont.swift in Sources */,
+				D7B585552F98894600276766 /* HomeViewModel.swift in Sources */,
 				D71C51FC2F95F21D00AA8060 /* UserDefaultHelper.swift in Sources */,
 				D71C51E72F95F21D00AA8060 /* ForgotPasswordView.swift in Sources */,
+				D70EFA232F99F6ED00F4B6A4 /* ReferBannerView.swift in Sources */,
+				D7B585612F989E9800276766 /* StoreSectionView.swift in Sources */,
 				D71C51DF2F95F21D00AA8060 /* BackButton.swift in Sources */,
 				D71C51EC2F95F21D00AA8060 /* RootView.swift in Sources */,
 			);
@@ -770,6 +845,7 @@
 			files = (
 				D7B232E22F801AEC00D6620F /* SignUpClass.swift in Sources */,
 				D7B232DD2F800F8600D6620F /* LoginClass.swift in Sources */,
+				D7B5855C2F98979000276766 /* HomeClass.swift in Sources */,
 				D7B232D52F800A4000D6620F /* SwiftUI-MVVM-AppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -23,8 +23,8 @@ struct Server {
   
   enum HostName {
     // https://devcmssquilio.thumbstack.dev/
-    static let Dev = "api.example.dev"
-    static let Live = "api.example.com"
+     static let Dev = "devcmssquilio.thumbstack.dev"
+     static let Live = "cms.squilio.com"
   }
   
   enum Path {
