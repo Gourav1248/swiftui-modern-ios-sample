@@ -10,7 +10,7 @@ import SwiftUI
 
 struct HomeListView: View {
 
-   let banners: [BannerSectionModel]
+   let banners: [BannerSliderModel]
    let stores: [StoresDataModel]
    let vouchers: [DealsAndVoucherModel]
    var onStoresViewAll: () -> Void = {}

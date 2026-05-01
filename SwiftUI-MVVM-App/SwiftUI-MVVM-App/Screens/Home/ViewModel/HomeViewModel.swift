@@ -8,9 +8,11 @@ import Foundation
 @MainActor
 class HomeViewModel: ObservableObject {
 
-   @Published var homeData: HomeDataResponseModel?
    @Published var errorMessage: String?
    @Published var isLoading: Bool = false
+   @Published var banners: [BannerSliderModel] = []
+   @Published var stores: [StoresDataModel] = []
+   @Published var vouchers: [DealsAndVoucherModel] = []
 
 
    // ✅ Protocol instead of concrete class — enables mocking in XCTest
@@ -26,7 +28,10 @@ class HomeViewModel: ObservableObject {
       errorMessage = nil
 
       do {
-         homeData = try await homeWebService.fetchHomeDetailsAPI()
+         let response = try await homeWebService.fetchHomeDetailsAPI()
+         banners = response.data?.bannerSlider ?? []
+         stores = response.data?.storesSection?.featuredStores ?? []
+         vouchers = response.data?.voucherSection?.featuredVouchers ?? []
       } catch {
          errorMessage = error.localizedDescription
       }

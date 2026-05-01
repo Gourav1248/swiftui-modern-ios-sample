@@ -13,7 +13,7 @@ enum Environment {
 
 struct Server {
   
-  static var environment: Environment = .dev
+  static var environment: Environment = .prod
   
   private init() {}
   

@@ -27,16 +27,16 @@ extension WebService {
     do {
       try checkInternetConnection()
        //DispatchQueue.main.async {
-      self.HUD.show()
+      //self.HUD.show()
        //}
-
+       dPrint("API: \(Server.BaseUrl + endPointName),\n params = \(parameters),\n header = \(headers)")
       
       let request = SessionManager.shared.request(Server.BaseUrl + endPointName, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: HTTPHeaders(headers))
       
       let response = await request.serializingDecodable(T.self).response
       return try handleResponse(response)
     } catch {
-      self.HUD.hide()
+      //self.HUD.hide()
       ErrorHandler.shared.handle(error)
       throw error
     }
@@ -45,7 +45,7 @@ extension WebService {
   func PostWebAPIData<T: Decodable>(param parameters: [String: Any]?, endPointName: String, headers: [String: String]) async throws -> T {
     do {
       
-      dPrint("endPointName = \(endPointName), param = \(parameters), headers = \(headers)")
+      dPrint("endPointName = \(Server.BaseUrl + endPointName), param = \(parameters), headers = \(headers)")
       
       try checkInternetConnection()
        DispatchQueue.main.async {

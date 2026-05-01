@@ -10,13 +10,13 @@ struct WebServiceHeaders {
   static var authorized: [String: String] {
     [
       "Authorization": "Bearer \(UserDefaultHelper.acessToken)",
-      "Accept-Language": UserDefaultHelper.selectedLanguage,
+      "Accept-Language": "en",
       "Accept": "application/json"
     ]
   }
   
   static let general: [String: String] = [
-    "Accept-Language": UserDefaultHelper.selectedLanguage,
+    "Accept-Language": "en",
     "Accept": "application/json"
   ]
 }

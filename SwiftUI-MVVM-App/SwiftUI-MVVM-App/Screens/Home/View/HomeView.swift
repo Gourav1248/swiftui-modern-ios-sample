@@ -17,6 +17,9 @@ struct HomeView: View {
    @AppStorage("userStoredDetails") private var obUser: Data = Data()
    @AppStorage("isLoggedIn") private var isLoggedIn: Bool = false
 
+   //Here I added homeview model object
+   @StateObject private var homeViewModel = HomeViewModel()
+
    var currentUser: UserDataModel? {
       return try? JSONDecoder().decode(UserDataModel.self, from: obUser)
    }
@@ -30,7 +33,19 @@ struct HomeView: View {
                // Custom Navigation Bar
                customNavBar
 
-               Spacer()
+
+               if homeViewModel.isLoading {
+                  Spacer()
+                  ProgressView()
+                  Spacer()
+               } else if let error = homeViewModel.errorMessage {
+                  Spacer()
+                  Text(error.description)
+                     .foregroundColor(.red)
+                     .padding()
+               } else {
+                  HomeListView(banners: homeViewModel.banners, stores: homeViewModel.stores, vouchers: homeViewModel.vouchers)
+               }
             }
 
             // Menu Overlay
@@ -39,6 +54,9 @@ struct HomeView: View {
             }
          }
          .navigationBarHidden(true)
+         .task {
+            await homeViewModel.fetchHomeDetailsData()
+         }
       }
    }
 

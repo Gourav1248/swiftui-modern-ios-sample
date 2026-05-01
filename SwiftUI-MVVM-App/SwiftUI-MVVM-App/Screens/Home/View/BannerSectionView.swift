@@ -10,7 +10,7 @@ import SwiftUI
 
 struct BannerSectionView: View {
 
-   let banners: [BannerSectionModel]
+   let banners: [BannerSliderModel]
    @State private var currentIndex: Int = 0
 
    var body: some View {
@@ -45,7 +45,7 @@ struct BannerSectionView: View {
 // MARK: - Banner Cell
 struct BannerCellView: View {
 
-   let banner: BannerSectionModel
+   let banner: BannerSliderModel
 
    var body: some View {
       ZStack {
@@ -78,7 +78,7 @@ struct BannerCellView: View {
             .padding(.vertical, 16)
             .frame(maxWidth: .infinity, alignment: .leading)
 
-            Image(banner.logo?.url ?? "")
+            Image(banner.image?.url ?? "")
                .resizable()
                .scaledToFit()
                .frame(width: 100, height: 110)
