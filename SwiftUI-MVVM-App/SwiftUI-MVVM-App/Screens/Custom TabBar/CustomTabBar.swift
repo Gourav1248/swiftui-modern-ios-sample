@@ -18,27 +18,23 @@ struct CustomTabBar: View {
 
    var body: some View {
 
-     // ZStack(alignment: .bottom) {
+      HStack {
+         tabItem(icon: .system("house"), tab: .home)
+         Spacer()
 
-         HStack {
-            tabItem(icon: .system("house"), tab: .home)
-            Spacer()
+         tabItem(icon: .asset("explore_icon"), tab: .settings)
+         Spacer()
 
-            tabItem(icon: .asset("explore_icon"), tab: .settings)
-            Spacer()
-
-            tabItem(icon: .asset("profile_icon"), tab: .profile)
-         }
-         .frame(height: 50)
-         .frame(maxWidth: .infinity)
-         .padding(.horizontal, 30)
-         .padding(.top, 15)
-         .padding(.bottom, 5)
-         .background(.white)
-         .cornerRadius(20)
-         .shadow(radius: 5)
-         //.clipShape(RoundedRectangle(cornerRadius: 20))
-      //}
+         tabItem(icon: .asset("profile_icon"), tab: .profile)
+      }
+      .frame(height: 50)
+      .frame(maxWidth: .infinity)
+      .padding(.horizontal, 30)
+      .padding(.top, 15)
+      .padding(.bottom, 5)
+      .background(.white)
+      .cornerRadius(20)
+      .shadow(radius: 5)
    }
 
    func tabItem(icon: TabIcon, tab: Tab) -> some View {
@@ -60,8 +56,8 @@ struct CustomTabBar: View {
                      .scaledToFit()
             }
          }
-            .frame(width: 22, height: 22)
-            .foregroundColor(selectedTab == tab ? Color("AppVoilet") : Color("AppLightGray"))
+         .frame(width: 22, height: 22)
+         .foregroundColor(selectedTab == tab ? Color("AppVoilet") : Color("AppLightGray"))
       }
    }
 }
