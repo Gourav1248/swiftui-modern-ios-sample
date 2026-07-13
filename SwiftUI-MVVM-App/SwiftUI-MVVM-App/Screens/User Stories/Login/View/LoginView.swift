@@ -242,6 +242,13 @@ extension LoginView: UserCreationDelegate {
         UserDefaults.standard.set(encoded, forKey: "userStoredDetails")
      }
 
+     if let jwtToken = try? JSONEncoder().encode(user.user) {
+        UserDefaults.standard.set(jwtToken, forKey: "jwtToken")
+        UserDefaultHelper.acessToken = user.jwt
+     }
+
+     print("UserDefaultHelper.acessToken = \(UserDefaultHelper.acessToken)")
+
      DispatchQueue.main.async {
         self.isNavigateToHomeTab = true
      }

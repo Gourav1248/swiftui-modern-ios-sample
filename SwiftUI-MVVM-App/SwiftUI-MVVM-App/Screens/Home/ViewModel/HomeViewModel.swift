@@ -29,6 +29,8 @@ class HomeViewModel: ObservableObject {
 
       do {
          let response = try await homeWebService.fetchHomeDetailsAPI()
+
+         print("response.data?.storesSection?.featuredStores = \(response.data?.storesSection?.featuredStores?.count)")
          banners = response.data?.bannerSlider ?? []
          stores = response.data?.storesSection?.featuredStores ?? []
          vouchers = response.data?.voucherSection?.featuredVouchers ?? []
