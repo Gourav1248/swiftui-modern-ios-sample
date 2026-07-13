@@ -26,10 +26,11 @@ struct MainTabView: View {
             switch selectedTab {
                case .home:
                   HomeView()
-                  Text("Home Screen")
+                  //Text("Home Screen")
 
                case .settings:
-                  Text("Store Screen")
+                  StoreListView(banners: [BannerSliderModel](), tags: [StoreTagsModel]())
+                  //Text("Store Screen")
 
                case .profile:
                   Text("Profile Screen")

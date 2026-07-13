@@ -133,3 +133,24 @@ class SessionManager {
   
   private init() {}
 }
+
+
+class JsonResponse {
+   func parseJsonDataByAPIResponse<T: Decodable>(responseData: Data, responseModel: T.Type, successCompletion: @escaping (T) -> Void, errorCompletion: @escaping (String) -> Void) {
+      do {
+         let userData = try JSONDecoder().decode(responseModel, from: responseData)
+         dPrintProperties("✅ \(responseModel) Success: \(userData)")
+         successCompletion(userData)
+      } catch let decodeError {
+         // Attempt to decode error response
+
+         if let apiError = try? JSONDecoder().decode(ErrorHandlingDataResponse.self, from: responseData),
+            let message = apiError.error?.message {
+            errorCompletion(String(describing: message))
+         } else {
+            errorCompletion("Something went wrong")
+         }
+         dPrint("❌ \(responseModel) Decode Error: \(String(describing: decodeError))")
+      }
+   }
+}
