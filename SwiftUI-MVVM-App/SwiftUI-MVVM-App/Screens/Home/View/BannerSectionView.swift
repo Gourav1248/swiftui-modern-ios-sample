@@ -14,15 +14,15 @@ struct BannerSectionView: View {
    @State private var currentIndex: Int = 0
 
    var body: some View {
-      VStack(spacing: 10) {
+      VStack(spacing: 5) {
          ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 12) {
+            HStack(spacing: 10) {
                ForEach(Array(banners.enumerated()), id: \.element.id) { index, banner in
                   BannerCellView(banner: banner)
                      .onAppear { currentIndex = index }
                }
             }
-            .padding(.horizontal, 16)
+            .padding(.horizontal, 10)
          }
 
          // Page dots
@@ -78,21 +78,16 @@ struct BannerCellView: View {
             .padding(.vertical, 16)
             .frame(maxWidth: .infinity, alignment: .leading)
 
-            Image(banner.image?.url ?? "")
-               .resizable()
-               .scaledToFit()
-               .frame(width: 100, height: 110)
-               .padding(.trailing, 8)
-               .padding(.top, 8)
+//            Image(banner.image?.url ?? "")
+//               .resizable()
+//               .scaledToFit()
+//               .frame(width: 100, height: 110)
+//               .padding(.trailing, 8)
+//               .padding(.top, 8)
          }
       }
-      .frame(width: 300, height: 150)
-      .shadow(color: .black.opacity(0.06), radius: 8, x: 0, y: 4)
+      .frame(width: 350, height: 150)
+      .border(Color.gray, width: 1)
+      .cornerRadius(10.0, corners: UIRectCorner.allCorners)
    }
 }
-
-//struct BannerSectionView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        BannerSectionView()
-//    }
-//}
