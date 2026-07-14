@@ -32,6 +32,12 @@ class StoresViewModel: ObservableObject {
    private var currentPage = 1
    private let pageSize = 25
    private var canLoadMore = true
+   private let storeWebService: StoreWebServiceProtocol?
+
+   init(storeWebService: StoreWebServiceProtocol = StoresWebService.sharedInstance) {
+      self.storeWebService = storeWebService
+      observeSearchText()
+   }
 
    // MARK: - Guard against duplicate initial loads
    // .task {} on a SwiftUI view runs once per view identity, but if the parent
@@ -48,9 +54,6 @@ class StoresViewModel: ObservableObject {
    // are automatically cancelled — no manual cleanup needed.
    private var cancellables = Set<AnyCancellable>()
 
-   init() {
-      observeSearchText()
-   }
 
    // MARK: - Combine: debounce search text, auto-trigger new search
    //
@@ -198,7 +201,7 @@ class StoresViewModel: ObservableObject {
 
          Task {
             do {
-               let response = try await StoresWebService.sharedInstance.fetchAllStoresAsync(
+               let response = try await self.storeWebService?.fetchAllStoresAsync(
                   isPopulateLogo: true,
                   isPopulateCashBack: true,
                   pageSize: self.pageSize,
@@ -212,7 +215,7 @@ class StoresViewModel: ObservableObject {
                   searchText: searchText
                )
 
-               let newStores = response.data ?? []
+               let newStores = response?.data ?? []
                promise(.success(newStores))
             } catch {
                await MainActor.run {
@@ -237,8 +240,8 @@ class StoresViewModel: ObservableObject {
 
          Task {
             do  {
-               let response = try await StoresWebService.sharedInstance.fetchStoreTags()
-               let newTags = response.data ?? []
+               let response = try await self.storeWebService?.fetchStoreTags()
+               let newTags = response?.data ?? []
                promise(.success(newTags))
             } catch {
                await MainActor.run(body: {
@@ -261,8 +264,8 @@ class StoresViewModel: ObservableObject {
 
          Task {
             do {
-               let response = try await StoresWebService.sharedInstance.fetchStoreBanners()
-               let newBanners = response.data ?? StoreBannerDataModel()
+               let response = try await self.storeWebService?.fetchStoreBanners()
+               let newBanners = response?.data ?? StoreBannerDataModel()
                promise(.success(newBanners))
             } catch {
                await MainActor.run(body: {

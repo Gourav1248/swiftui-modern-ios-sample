@@ -68,6 +68,7 @@
 		D72A6FFA2FFE676A00BE01AE /* StoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72A6FF92FFE676A00BE01AE /* StoreViewModel.swift */; };
 		D762E40F3000E5520029F1BA /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D762E40E3000E5520029F1BA /* SearchBarView.swift */; };
 		D776A7C52FFFAA350025D2C2 /* StoresWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D776A7C42FFFAA350025D2C2 /* StoresWebService.swift */; };
+		D78856833004E36A0066E0B4 /* StoreWebServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78856823004E36A0066E0B4 /* StoreWebServiceProtocol.swift */; };
 		D7B232D52F800A4000D6620F /* SwiftUI-MVVM-AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B232D42F800A4000D6620F /* SwiftUI-MVVM-AppTests.swift */; };
 		D7B232DD2F800F8600D6620F /* LoginClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B232DC2F800F8600D6620F /* LoginClass.swift */; };
 		D7B232E22F801AEC00D6620F /* SignUpClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B232E12F801AEC00D6620F /* SignUpClass.swift */; };
@@ -160,6 +161,7 @@
 		D75224342F6FF59A00F478E3 /* SwiftUI-MVVM-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-MVVM-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D762E40E3000E5520029F1BA /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		D776A7C42FFFAA350025D2C2 /* StoresWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresWebService.swift; sourceTree = "<group>"; };
+		D78856823004E36A0066E0B4 /* StoreWebServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreWebServiceProtocol.swift; sourceTree = "<group>"; };
 		D7B232D22F800A4000D6620F /* SwiftUI-MVVM-AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftUI-MVVM-AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7B232D42F800A4000D6620F /* SwiftUI-MVVM-AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI-MVVM-AppTests.swift"; sourceTree = "<group>"; };
 		D7B232DC2F800F8600D6620F /* LoginClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginClass.swift; sourceTree = "<group>"; };
@@ -633,6 +635,7 @@
 		D72A6FE12FFE2DE000BE01AE /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				D78856823004E36A0066E0B4 /* StoreWebServiceProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -905,6 +908,7 @@
 				D71C51F12F95F21D00AA8060 /* WebServiceHeaders.swift in Sources */,
 				D72A6FF82FFE64CD00BE01AE /* StoreListView.swift in Sources */,
 				D71C51E22F95F21D00AA8060 /* SignUpModel.swift in Sources */,
+				D78856833004E36A0066E0B4 /* StoreWebServiceProtocol.swift in Sources */,
 				D71C51E42F95F21D00AA8060 /* ForgotPasswordViewModel.swift in Sources */,
 				D7B585652F98A1A100276766 /* VoucherCellView.swift in Sources */,
 				D71C51F02F95F21D00AA8060 /* AuthenticationWebService.swift in Sources */,
