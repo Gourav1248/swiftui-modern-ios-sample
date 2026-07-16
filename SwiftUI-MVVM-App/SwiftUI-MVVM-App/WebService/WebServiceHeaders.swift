@@ -9,7 +9,7 @@ struct WebServiceHeaders {
   
   static var authorized: [String: String] {
     [
-      "Authorization": "Bearer \(UserDefaultHelper.acessToken)",
+      "Authorization": "Bearer \(KeychainManager.shared.fetchValue(forKey: KeychainKeys.accessToken) ?? UserDefaultHelper.acessToken)",
       "Accept-Language": "en",
       "Accept": "application/json"
     ]

@@ -277,7 +277,5 @@ class StoresViewModel: ObservableObject {
       }
       .eraseToAnyPublisher()
    }
-
-
 }
 

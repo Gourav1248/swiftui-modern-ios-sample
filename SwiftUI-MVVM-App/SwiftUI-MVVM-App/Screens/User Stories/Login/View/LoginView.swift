@@ -242,8 +242,8 @@ extension LoginView: UserCreationDelegate {
         UserDefaults.standard.set(encoded, forKey: "userStoredDetails")
      }
 
-     if let jwtToken = try? JSONEncoder().encode(user.user) {
-        UserDefaults.standard.set(jwtToken, forKey: "jwtToken")
+     if user.jwt.count > 0 {
+        KeychainManager.shared.save(value: user.jwt, forKey: KeychainKeys.accessToken)
         UserDefaultHelper.acessToken = user.jwt
      }
 
