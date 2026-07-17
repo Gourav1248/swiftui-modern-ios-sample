@@ -5,6 +5,7 @@ struct StoreListView: View {
     let tags: [StoreTagsModel]
     //let stores: [StoresDataModel]
    @State private var isSearchActive: Bool = false
+   @State private var selectedTagId: String?
 
    @StateObject private var viewModel = StoresViewModel()
 
@@ -46,17 +47,35 @@ struct StoreListView: View {
                 }
                 .padding(.horizontal, 16)
 
-               TagListView(tags: viewModel.storeTags)
+               TagListView(
+                  tags: viewModel.storeTags,
+                  onTapFilter: {
+                     print("Filter tapped")
+                  }, onSelectTag: { tag in
+                     selectedTagId = tag.documentId
+                     if tag.tag == "All" {
+                        viewModel.strTagId = ""
+                     } else {
+                        viewModel.strTagId = selectedTagId
+                     }
+
+                     viewModel.loadStores()
+                  }, selectedTagId: selectedTagId
+               )
 
                 LazyVStack(spacing: 14) {
-                   ForEach(viewModel.stores, id: \.id) { store in
-                        StoreCellView(store: store, screenWidth: 325)
-                         .onAppear {
-                            if store.id == viewModel.stores.last?.id {
-                               viewModel.loadNextPageIfNeeded()
+                   if viewModel.stores.count == 0 {
+                      Text("No Stores associated with this tag")
+                   } else {
+                      ForEach(viewModel.stores, id: \.id) { store in
+                         StoreCellView(store: store, screenWidth: 325)
+                            .onAppear {
+                               if store.id == viewModel.stores.last?.id {
+                                  viewModel.loadNextPageIfNeeded()
+                               }
                             }
-                         }
-                    }
+                      }
+                   }
                 }
                 .padding(.horizontal, 16)
             }

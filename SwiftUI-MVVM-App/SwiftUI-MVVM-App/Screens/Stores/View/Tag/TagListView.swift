@@ -6,6 +6,7 @@ struct TagListView: View {
    let tags: [StoreTagsModel]
    var onTapFilter: (() -> Void)? = nil
    var onSelectTag: ((StoreTagsModel) -> Void)? = nil
+   let selectedTagId: String?
 
    var body: some View {
       ScrollView(.horizontal, showsIndicators: false) {
@@ -18,8 +19,13 @@ struct TagListView: View {
             }
 
             ForEach(tags, id: \.id) { tag in
-               TagChipView(tag: tag)
-                  .onTapGesture { onSelectTag?(tag) }
+               TagChipView(
+                  tag: tag,
+                  isSelected: tag.documentId == selectedTagId
+               )
+               .onTapGesture {
+                  onSelectTag?(tag)
+               }
             }
          }
          .padding(.horizontal, 16)

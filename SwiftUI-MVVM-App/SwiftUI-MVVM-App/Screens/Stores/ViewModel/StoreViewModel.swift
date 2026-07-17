@@ -27,6 +27,7 @@ class StoresViewModel: ObservableObject {
    @Published var isLoadingMore: Bool = false
    @Published var isInitialLoading: Bool = false
    @Published var errorMessage: String?
+   var strTagId: String?
 
    // MARK: - Pagination
    private var currentPage = 1
@@ -208,7 +209,7 @@ class StoresViewModel: ObservableObject {
                   pageNo: self.currentPage,
                   status: "published",
                   sort: "id:desc",
-                  storeTag: "",
+                  storeTag: self.strTagId ?? "",
                   categories: "",
                   filterBy: "",
                   shippingLocations: "",
