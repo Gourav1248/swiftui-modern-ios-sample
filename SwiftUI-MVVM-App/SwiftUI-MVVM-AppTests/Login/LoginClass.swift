@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import SwiftUI_Learning
+@testable import SwiftUI_MVVM_App
 
 final class LoginClass: XCTestCase {
    var viewModel: LoginViewModel!

@@ -66,6 +66,8 @@ struct StoreListView: View {
                 LazyVStack(spacing: 14) {
                    if viewModel.stores.count == 0 {
                       Text("No Stores associated with this tag")
+                         .padding(.all, 5)
+                         .padding(.top, 50)
                    } else {
                       ForEach(viewModel.stores, id: \.id) { store in
                          StoreCellView(store: store, screenWidth: 325)

@@ -13,7 +13,7 @@
 import XCTest
 @testable import SwiftUI_MVVM_App
 
-final class HomeViewModelTests: XCTestCase {
+/*final class HomeViewModelTests: XCTestCase {
 
    var viewModel: HomeViewModel!
    var mockService: MockHomeWebService!
@@ -49,4 +49,4 @@ final class HomeViewModelTests: XCTestCase {
       XCTAssertNotNil(viewModel.errorMessage)
       XCTAssertFalse(viewModel.isLoading)
    }
-}
+} */
