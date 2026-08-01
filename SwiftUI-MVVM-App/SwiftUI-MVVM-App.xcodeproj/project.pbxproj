@@ -66,6 +66,7 @@
 		D72A6FF62FFE417C00BE01AE /* StoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72A6FF52FFE417C00BE01AE /* StoreModel.swift */; };
 		D72A6FF82FFE64CD00BE01AE /* StoreListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72A6FF72FFE64CD00BE01AE /* StoreListView.swift */; };
 		D72A6FFA2FFE676A00BE01AE /* StoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72A6FF92FFE676A00BE01AE /* StoreViewModel.swift */; };
+		D7360CD0301DDD7700B5B0AA /* ProfileClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7360CCF301DDD7700B5B0AA /* ProfileClass.swift */; };
 		D762E40F3000E5520029F1BA /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D762E40E3000E5520029F1BA /* SearchBarView.swift */; };
 		D772A18F30060A280059AE7D /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D772A18E30060A280059AE7D /* KeychainManager.swift */; };
 		D776A7C52FFFAA350025D2C2 /* StoresWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D776A7C42FFFAA350025D2C2 /* StoresWebService.swift */; };
@@ -164,6 +165,7 @@
 		D72A6FF52FFE417C00BE01AE /* StoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreModel.swift; sourceTree = "<group>"; };
 		D72A6FF72FFE64CD00BE01AE /* StoreListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreListView.swift; sourceTree = "<group>"; };
 		D72A6FF92FFE676A00BE01AE /* StoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewModel.swift; sourceTree = "<group>"; };
+		D7360CCF301DDD7700B5B0AA /* ProfileClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileClass.swift; sourceTree = "<group>"; };
 		D75224342F6FF59A00F478E3 /* SwiftUI-MVVM-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-MVVM-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D762E40E3000E5520029F1BA /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		D772A18E30060A280059AE7D /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
@@ -683,6 +685,14 @@
 			path = Store;
 			sourceTree = "<group>";
 		};
+		D7360CCE301DDD3600B5B0AA /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D7360CCF301DDD7700B5B0AA /* ProfileClass.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		D752242B2F6FF59A00F478E3 = {
 			isa = PBXGroup;
 			children = (
@@ -706,6 +716,7 @@
 		D7B232D32F800A4000D6620F /* SwiftUI-MVVM-AppTests */ = {
 			isa = PBXGroup;
 			children = (
+				D7360CCE301DDD3600B5B0AA /* Profile */,
 				D7B5855D2F98979500276766 /* Home */,
 				D7B232E02F801A7600D6620F /* SignUp */,
 				D7B232DB2F800F5200D6620F /* Login */,
@@ -1022,6 +1033,7 @@
 				D7B232E22F801AEC00D6620F /* SignUpClass.swift in Sources */,
 				D7B232DD2F800F8600D6620F /* LoginClass.swift in Sources */,
 				D7B5855C2F98979000276766 /* HomeClass.swift in Sources */,
+				D7360CD0301DDD7700B5B0AA /* ProfileClass.swift in Sources */,
 				D7B232D52F800A4000D6620F /* SwiftUI-MVVM-AppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

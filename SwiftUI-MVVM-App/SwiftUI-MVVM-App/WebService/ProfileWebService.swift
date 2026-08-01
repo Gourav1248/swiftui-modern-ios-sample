@@ -22,4 +22,14 @@ extension ProfileWebService: ProfileWebServiceProtocol {
       let strUrl = APIRouter.Profile.MyProfile
       return try await WebService.shared.GetWebAPIData(param: nil, endPointName: strUrl, headers: WebServiceHeaders.authorized)
    }
+
+   func getUserActivitiesAPI() async throws -> UserActivitiesDataResponse {
+      let strUrl = APIRouter.Profile.MyActivities
+      return try await WebService.shared.GetWebAPIData(param: nil, endPointName: strUrl, headers: WebServiceHeaders.authorized)
+   }
+
+   func getPurchaseTransactionsAPI() async throws -> TransactionModelDataResponse {
+      let strUrl = APIRouter.Payouts.MyTransaction
+      return try await WebService.shared.GetWebAPIData(param: nil, endPointName: strUrl, headers: WebServiceHeaders.authorized)
+   }
 }

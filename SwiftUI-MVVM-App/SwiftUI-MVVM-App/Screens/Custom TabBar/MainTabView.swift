@@ -33,7 +33,7 @@ struct MainTabView: View {
                   //Text("Store Screen")
 
                case .profile:
-                  Text("Profile Screen")
+                  ProfileView()
             }
          }
          .frame(maxWidth: .infinity, maxHeight: .infinity)

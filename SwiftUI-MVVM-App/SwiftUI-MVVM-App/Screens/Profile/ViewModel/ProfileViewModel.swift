@@ -13,7 +13,9 @@ class ProfileViewModel: ObservableObject {
 
    @Published var errorMessage: String?
    @Published var isLoading: Bool = false
-   @Published var userProfile: [UserDataModel] = []
+   @Published var userProfile: UserDataModel = UserDataModel()
+   @Published var arrActivities: [UserActivitiesDataModel] = [UserActivitiesDataModel]()
+   @Published var arrTransactions: [TransactionDataModel] = [TransactionDataModel]()
    private let profileWebService: ProfileWebServiceProtocol
 
    init(profileWebService: ProfileWebServiceProtocol = ProfileWebService.shared) {
@@ -24,16 +26,41 @@ class ProfileViewModel: ObservableObject {
 
 extension ProfileViewModel {
 
-   func getUserProfileData() async {
+   @MainActor
+   func loadProfileDetailsData() async {
       isLoading = true
       errorMessage = nil
-      do {
-         let response = try await profileWebService.getUserProfileAPI()
+
+      defer {
          isLoading = false
+      }
+
+      do {
+         async let userProfile = getUserProfileData()
+         async let userActivities = getUserActivities()
+         async let userTransactions = getPurchaseTransactions()
+
+
+         let (profileResponse, activitiesResponse, transactionResponse) = try await (userProfile, userActivities, userTransactions)
+         self.userProfile = profileResponse.user
+         self.arrActivities = activitiesResponse.activityDetails ?? [UserActivitiesDataModel]()
+         self.arrTransactions = transactionResponse.transactions ?? [TransactionDataModel]()
+
       } catch {
          errorMessage = error.localizedDescription
       }
+
    }
 
-   
+   private func getUserProfileData() async throws -> UserCreationDataResponse {
+      return try await profileWebService.getUserProfileAPI()
+   }
+
+   private func getUserActivities() async throws -> UserActivitiesDataResponse {
+      return try await profileWebService.getUserActivitiesAPI()
+   }
+
+   private func getPurchaseTransactions() async throws -> TransactionModelDataResponse {
+      return try await profileWebService.getPurchaseTransactionsAPI()
+   }
 }

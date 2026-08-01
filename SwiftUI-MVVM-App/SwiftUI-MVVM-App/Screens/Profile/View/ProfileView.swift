@@ -8,9 +8,22 @@
 import SwiftUI
 
 struct ProfileView: View {
+
+   @StateObject var obProfile: ProfileViewModel = ProfileViewModel()
+
     var body: some View {
        VStack {
-          
+         Text("Profile")
+
+          Text("Name = \(obProfile.userProfile.givenName ?? "")")
+          Text("Activities = \(obProfile.arrActivities.count)")
+
+       }
+       .task {
+          await obProfile.loadProfileDetailsData()
+       }
+       .onAppear() {
+
        }
     }
 }
