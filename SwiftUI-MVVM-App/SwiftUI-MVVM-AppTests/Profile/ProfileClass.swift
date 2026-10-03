@@ -28,16 +28,26 @@ final class ProfileClass: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
 
-   func callUserProfileDetails_Successfully() {
-      profileViewModel.loadProfileDetailsData()
+   func testCallUserProfileDetails_Successfully() async throws {
+      mockService.mockProfileResponse = .mockUserResponse(user: .mockUserData(
+         username: "gourav_joshi",
+         email: "gourav@example.com",
+         walletBalance: 500
+      ))
+      mockService.mockActivitiesResponse = UserActivitiesDataResponse(activityDetails: [/* your model */])
+      mockService.mockTransactionResult = TransactionModelDataResponse(transactions: [/* your model */])
+      mockService.shouldThrow = false
+
+      // When
+      await profileViewModel.loadProfileDetailsData()
+
+      // Then
+      XCTAssertNil(profileViewModel.errorMessage)
+      XCTAssertEqual(profileViewModel.userProfile.username, "gourav_joshi")
+      XCTAssertEqual(profileViewModel.userProfile.email, "gourav@example.com")
+      XCTAssertEqual(profileViewModel.userProfile.walletBalance, 500)
+
    }
 
 }

@@ -31,7 +31,7 @@ extension UserDataModel {
 }
 
 extension UserCreationDataResponse {
-   static mockUserResponse(user: UserDataModel = .mockUserData()) -> UserCreationDataResponse {
+   static func mockUserResponse(user: UserDataModel = .mockUserData()) -> UserCreationDataResponse {
       var response = UserCreationDataResponse()
       response.jwt = "mock-jwt-token"
       response.user = user

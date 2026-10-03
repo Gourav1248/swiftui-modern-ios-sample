@@ -16,7 +16,12 @@ struct ProfileView: View {
          Text("Profile")
 
           Text("Name = \(obProfile.userProfile.givenName ?? "")")
-          Text("Activities = \(obProfile.arrActivities.count)")
+
+          HStack {
+             Text("Activities = \n \(obProfile.arrActivities.count)")
+             Text("Transactions = \n \(obProfile.arrTransactions.count)")
+          }
+
 
        }
        .task {

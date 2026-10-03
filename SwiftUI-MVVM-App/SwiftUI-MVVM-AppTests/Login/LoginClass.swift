@@ -27,7 +27,7 @@ final class LoginClass: XCTestCase {
    @MainActor
    func testLoginWithValidDetails() async {
 
-      let request = LoginRequest(identifier: "iosui1@mailinator.com", password: "Test@1234")
+      let request = LoginRequest(identifier: "gouravjtest@gmail.com", password: "Test@1234")
 
       await viewModel.loginRequest(params: request)
       XCTAssertNil(viewModel.errorMessage)
@@ -55,7 +55,7 @@ final class LoginClass: XCTestCase {
       viewModel.userResponseDelegate = delegate
 
       let request = LoginRequest(
-         identifier: "iosui1@mailinator.com",
+         identifier: "gouravjtest@gmail.com",
          password: "Test@1234"
       )
 
